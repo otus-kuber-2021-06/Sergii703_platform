@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: 'app'
+  labels:
+    key: 'test'
+spec:
+  containers:
+  - name: app
+    image: sergii703/app-image
+
