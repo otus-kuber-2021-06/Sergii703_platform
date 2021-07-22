@@ -4,8 +4,24 @@ metadata:
   name: 'app'
   labels:
     key: 'test'
+
 spec:
   containers:
   - name: app
     image: sergii703/app-image
+    volumeMounts:
+    - name: app
+      mountPath: /app
+  
+  initContainers:
+  - name: init-app
+    image: busybox:1.31.0
+    volumeMounts:
+    - name: app
+      mountPath: /app
+    command: ['sh', '-c', 'wget -O- https://tinyurl.com/otus-k8s-intro | sh']
+  
+  volumes:
+  - name: app
+    emptyDir: {}
 
