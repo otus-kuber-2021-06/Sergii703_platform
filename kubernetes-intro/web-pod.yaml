@@ -8,7 +8,7 @@ metadata:
 spec:
   containers:
   - name: web
-    image: sergii703/web-image
+    image: sergii703/web
     volumeMounts:
     - name: web
       mountPath: /app
