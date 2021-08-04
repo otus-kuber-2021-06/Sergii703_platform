@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend
+  name: deployment
   labels:
-    app: frontend
+    app: deployment
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: frontend
+      app: deployment
   template:
     metadata:
       labels:
-        app: frontend
+        app: deployment
     spec:
       containers:
       - name: server
@@ -40,3 +40,4 @@ spec:
           value: "checkoutservice:5050"
         - name: AD_SERVICE_ADDR
           value: "adservice:9555"
+

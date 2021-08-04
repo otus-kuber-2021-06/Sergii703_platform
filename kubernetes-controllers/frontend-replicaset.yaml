@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: frontend
+  name: replicaset
   labels:
-    app: frontend
-    tier: frontend
+    app: replicaset
+    tier: replicaset
 spec:
   replicas: 3
   selector:
     matchLabels:
-      tier: frontend
+      tier: replicaset
   template:
     metadata:
       labels:
-        tier: frontend
+        tier: replicaset
     spec:
       containers:
       - name: server
@@ -33,3 +33,4 @@ spec:
           value: "checkoutservice:5050"
         - name: AD_SERVICE_ADDR
           value: "adservice:9555"
+
