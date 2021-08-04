@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: server
-        image: srgii703/frontend
+        image: sergii703/frontend
         readinessProbe:
             initialDelaySeconds: 10
             httpGet:
