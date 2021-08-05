@@ -18,7 +18,7 @@ metadata:
   name: carol-role
 rules:
 - apiGroups: [""]
-  resources: ["namespaces"]
+  resources: ["pods"]
   verbs: ["get", "watch", "list"]
 
 ---
